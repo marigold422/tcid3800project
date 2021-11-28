@@ -1,0 +1,27 @@
+img {
+        width: 300px;
+        height: 300px;
+        object-fit:  contain;
+        padding: 5px;
+        filter: drop-shadow(0 0 0.75rem white);
+      }
+
+.card{
+  width: 20%;
+  text-align: center;
+  background-color: #62929e;
+  border-radius: 25px;
+  float: left;
+  color: white;
+
+}
+
+.grid {
+  display: flex;
+  padding: 100px;
+  justify-content: space-between;
+}
+
+body{
+  background-color: #fdfdff;
+}

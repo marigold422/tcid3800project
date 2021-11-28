@@ -5,104 +5,184 @@
         <title>Registration</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <style>
-        body{
-            margin: 50px;
-            background: fdfdff;
-        }
-        * {
-            box-sizing: border-box
-        }
-          input[type=text], input[type=password], input[type=email] {
-          width: 100%;
-          display: inline-block;
-          border: none;
-          background: #f1f1f1;
-        }
-
-        input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-          background-color: #ddd;
-          outline: none;
-        }
-        .btn-primary{
-            background-color: #62929e;
-            color: fdfdff;
-        }
-        .btn-primary:hover{
-            background-color: #546a7b;
-            color: fdfdff;
-        }
-
-        button {
-          background-color: #62929e;
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          cursor: pointer;
-          width: 100%;
-          opacity: 0.9;
-        }
-
-        button:hover {
-          opacity:1;
-        }
-
-        /* Extra styles for the cancel button */
-        .cancelbtn {
-          padding: 14px 20px;
-          background-color: #f44336;
-        }
-
-        /* Float cancel and signup buttons and add an equal width */
-        .cancelbtn, .signupbtn {
-          float: left;
-          width: 50%;
-        }
-
-        /* Add padding to container elements */
-        .container {
-          padding: 16px;
-        }
-
-        /* Clear floats */
-        .clearfix::after {
-          content: "";
-          clear: both;
-          display: table;
-        }
-
-        /* Change styles for cancel button and signup button on extra small screens */
-        @media screen and (max-width: 300px) {
-          .cancelbtn, .signupbtn {
-            width: 100%;
+          body{
+              margin: 0px;
+              background: fdfdff;
           }
-        }
+          * {
+              box-sizing: border-box
+          }
+            input[type=text], input[type=password], input[type=email] {
+            width: 100%;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+          }
+
+          input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+            background-color: #ddd;
+            outline: none;
+          }
+          .btn-primary{
+              background-color: #62929e;
+              color: fdfdff;
+          }
+          .btn-primary:hover{
+              background-color: #546a7b;
+              color: fdfdff;
+          }
+
+          button {
+            background-color: #62929e;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+          }
+
+          button:hover {
+            opacity:1;
+          }
+
+          /* Extra styles for the cancel button */
+          .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+          }
+
+          /* Float cancel and signup buttons and add an equal width */
+          .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+          }
+
+          /* Add padding to container elements */
+          .container {
+            padding: 16px;
+          }
+
+          /* Clear floats */
+          .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+
+          /* Change styles for cancel button and signup button on extra small screens */
+          @media screen and (max-width: 300px) {
+            .cancelbtn, .signupbtn {
+              width: 100%;
+            }
+          }
 
         </style>
     </head>
-    <body>
-        <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="firstName">First Name</label>
-          <input type="text" class="form-control" placeholder="Name">
+    <body style="background-color: #c6c5b9;">
+
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #393d3f;">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="team.html">Meet The Team</a>
+            <a class="nav-item nav-link" href="registration.html">Registration</a>
+            <a class="nav-item nav-link" href="tAndR.html">Tools And Resources</a>
+            <a class="nav-item nav-link" href="example.html">Examples</a>
+            <a class="nav-item nav-link" href="industry.html">Industry</a>
+          </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" placeholder="Name">
+      </nav>
+
+
+
+      <section class="vh-99" style="background-color: #c6c5b9; ">
+          <div class="container h-90">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" style="border-radius: 25px;">
+                  <div class="card-body p-md-5">
+                    <div class="row justify-content-center">
+                      <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                        <form class="mx-1 mx-md-4">
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="form3Example1c" class="form-control" />
+                              <label class="form-label" for="form3Example1c">Your Name</label>
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="email" id="form3Example3c" class="form-control" />
+                              <label class="form-label" for="form3Example3c">Your Email</label>
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="password" id="form3Example4c" class="form-control" />
+                              <label class="form-label" for="form3Example4c">Password</label>
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="password" id="form3Example4cd" class="form-control" />
+                              <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                            </div>
+                          </div>
+
+
+
+                          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                            <button type="button" class="btn btn-primary btn-lg">Sign Up</button>
+                          </div>
+
+                        </form>
+
+                      </div>
+                      <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                        <img src="images/login.png" class="img-fluid" alt="Sample image">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <footer class="bg-light text-center text-lg-start" style="position: absolute; bottom: 0px; width: 100%;">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #393d3f; color: white;">
+          © 2021 Copyright:
+          <a class="text-light" href="">TCID3800</a>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control"placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-      </div>
-      <div class="form-group">
-      </div>
-      <button type="submit" class="btn btn-primary">Sign up</button>
-    </form>
-</body>
-</html>
+        <!-- Copyright -->
+      </footer>
+
+      <script type="text/javascript">
+          function getInputFromTextBox() {
+            var input = document.getElementById("firstName").value;
+            alert(input);
+          }
+        </script>
+
+
+    </body>
+    </html>

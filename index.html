@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/homeCSS.css">
+    <meta charset="utf-8">
+    <title></title>
+
+    <script>
+      function setCookie(cname,cvalue,exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+          alert("Welcome again " + user);
+        } else {
+           user = prompt("Please enter your name:","");
+           if (user != "" && user != null) {
+             setCookie("username", user, 30);
+           }
+        }
+        document.getElementById("jName").innerHTML = user;
+      }
+
+      </script>
+
+
+  </head>
+  <body onload="checkCookie()">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #393d3f;">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="team.html">Meet The Team</a>
+          <a class="nav-item nav-link" href="registration.html">Registration</a>
+          <a class="nav-item nav-link" href="tAndR.html">Tools And Resources</a>
+          <a class="nav-item nav-link" href="example.html">Examples</a>
+          <a class="nav-item nav-link" href="industry.html">Industry</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="clocks" class="time">
+
+      <canvas id="canvas" width="400" height="400"></canvas>
+
+
+    </div>
+
+    <h2 id = "homeText">Welcome back <span id="jName"></span>! The current date is: <span id = "jDate"></span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="bg-light text-center text-lg-start" style="position: absolute; width: 100%;">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: #393d3f; color: white;">
+        © 2021 Copyright:
+        <a class="text-light" href="">TCID3800</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+    <script type="text/javascript">
+
+    //start analog clock
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    radius = radius * 0.90
+    setInterval(drawClock, 1000);
+
+    function drawClock() {
+      drawFace(ctx, radius);
+      drawNumbers(ctx, radius);
+      drawTime(ctx, radius);
+    }
+
+    function drawFace(ctx, radius) {
+      var grad;
+      ctx.beginPath();
+      ctx.arc(0, 0, radius, 0, 2*Math.PI);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+      grad.addColorStop(0, '#333');
+      grad.addColorStop(0.5, 'white');
+      grad.addColorStop(1, '#333');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = radius*0.1;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+      ctx.fillStyle = '#546a7b';
+      ctx.fill();
+    }
+
+    function drawNumbers(ctx, radius) {
+      var ang;
+      var num;
+      ctx.font = radius*0.15 + "px arial" ;
+      ctx.textBaseline="middle";
+      ctx.textAlign="center";
+      for(num = 1; num < 13; num++){
+        ang = num * Math.PI / 6;
+        ctx.rotate(ang);
+        ctx.translate(0, -radius*0.85);
+        ctx.rotate(-ang);
+        ctx.fillText(num.toString(), 0, 0);
+        ctx.rotate(ang);
+        ctx.translate(0, radius*0.85);
+        ctx.rotate(-ang);
+      }
+    }
+
+    function drawTime(ctx, radius){
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        //hour
+        hour=hour%12;
+        hour=(hour*Math.PI/6)+
+        (minute*Math.PI/(6*60))+
+        (second*Math.PI/(360*60));
+        drawHand(ctx, hour, radius*0.5, radius*0.07);
+        //minute
+        minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+        drawHand(ctx, minute, radius*0.8, radius*0.07);
+        // second
+        second=(second*Math.PI/30);
+        drawHand(ctx, second, radius*0.9, radius*0.02);
+    }
+
+    function drawHand(ctx, pos, length, width) {
+        ctx.beginPath();
+        ctx.lineWidth = width;
+        ctx.lineCap = "round";
+        ctx.moveTo(0,0);
+        ctx.rotate(pos);
+        ctx.lineTo(0, -length);
+        ctx.stroke();
+        ctx.rotate(-pos);
+    }
+    //end analog Clock
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById("jDate").innerHTML = today;
+
+
+
+    </script>
+
+  </body>
+
+</html>

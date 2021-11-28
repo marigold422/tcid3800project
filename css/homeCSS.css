@@ -1,0 +1,26 @@
+#navbarNavAltMarkup {
+  background-color: #393d3f;
+}
+
+#clocks{
+  float: right;
+}
+
+#txt{
+  color: white;
+  text-align: center;
+  background-color: #393d3f;
+  font-size: 30px;
+}
+
+#canvas{
+  background-color: #fdfdff;
+}
+
+#homeText{
+  font-size: 270px;
+}
+
+body{
+  background-color: #fdfdff;
+}

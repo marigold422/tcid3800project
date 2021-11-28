@@ -1,0 +1,20 @@
+img{
+      width: 500px;
+      height: 300px;
+      object-fit:  contain;
+      filter: drop-shadow(0 0 0.75rem white);
+    }
+
+.row{
+  background-color: #62929e;
+  border-radius: 15px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 3%;
+  width: 100%;
+  color: white;
+}
+
+body{
+  background-color: #fdfdff;
+}

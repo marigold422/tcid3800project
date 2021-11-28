@@ -4,55 +4,60 @@
         <meta charset="utf-8">
         <title>Tools and Resources</title>
         <style>
-        img{
-            max-width: 500px;
-        }
-        .menu {
-          overflow: hidden;
-          background-color: #393d3f;
-        }
+          img{
+              width: 500px;
+              height: 300px;
+              object-fit:  contain;
+          }
+          .menu {
+            overflow: hidden;
+            background-color: #393d3f;
+          }
 
-        .menu a {
-          float: left;
-          color: #f2f2f2;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-          font-size: 17px;
-        }
+          .menu a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+          }
 
-        .menu a:hover {
-          background-color: #62929e;
-        }
-        .card{
+          .menu a:hover {
+            background-color: #62929e;
+          }
+          .card{
 
-        }
+          }
         </style>
     </head>
     <body>
-        <div class="top">
+
+      <div class="menu">
+        <a href="#atom">Atom</a>
+        <a href="#vs">Visual Studio</a>
+        <a href="#w3">w3schools</a>
+        <a href="#stack">Stack Overflow</a>
+        <a href="#git">GitHub</a>
+        <a href="#boot">Bootstrap</a>
+        <a href="#green">Greensock</a>
+        <a href="#jQ">jQueary</a>
+      </div>
+
+      <div class="top">
             <h1>Tools and Resources for Front-End Developers</h1>
             <p>In order for you can create your website you first need an integrated development environment or a text and source code editor to write your HTML, CSS, and Javascript. Some highly suggested programs to use are Atom and Visual Studio Code.</p>
             <p>When Coding you may need some assistance. the best websites to go to for assistance are w3schools and Stack Overflow.</p>
-            <p>When working with a team Git and Github are usefull in sharing code.</p>
+            <p>When working with a team Git and Github are useful in sharing code.</p>
             <p>When coding there are some tools that can simplify the development of informative web pages by utilizing open-source toolkits like Bootstrap, Greensock, and jQuery.</p>
         </div>
-        <div class="menu">
-          <a href="#atom">Atom</a>
-          <a href="#vs">Visual Studio</a>
-          <a href="#w3">w3schools</a>
-          <a href="#stack">Stack Overflow</a>
-          <a href="#git">GitHub</a>
-          <a href="#boot">Bootstrap</a>
-          <a href="#green">Greensock</a>
-          <a href="#jQ">jQueary</a>
-        </div>
-        <div class="card" id="atom">
+
+      <div class="card" id="atom">
             <h1>Atom</h1>
             <ul>
-                <li>works across operating systems, use on OS X, Windows, or linux</li>
+                <li>Works across operating systems, use on OS X, Windows, or Linux.</li>
                 <li>Has a built-in package manager.</li>
-                <li>Able to download Git package(link to git section on the page). Git allows you to collaborate with others</li>
+                <li>Able to download Git package(link to git section on the page). Git allows you to collaborate with others.</li>
                 <li>Has a smart and flexible autocomplete.</li>
                 <li>Easily browse files.</li>
                 <li>Has Multiple panes to compare and edit code across files.</li>
@@ -62,7 +67,7 @@
                 Learn more
             </button>
         </div>
-        <div class="card" id="vs">
+      <div class="card" id="vs">
             <h1>Visual Studio</h1>
             <ul>
                 <li>Has IntelliSense that provides smart completions based on variable types, function definitions, and imported modules</li>
@@ -75,63 +80,63 @@
                 Learn more
             </button>
         </div>
-        <div class="card" id="w3">
+      <div class="card" id="w3">
             <h1>w3schools</h1>
             <ul>
                 <li>Is a learning tool for HTML, CSS, JavaScript, Python, PHP, and SQL.</li>
                 <li>W3schools is free with some premium features.</li>
-                </ul>
+            </ul>
             <img class="left" src="ToolsAndResources\w3schools.jpg" alt="w3schools">
             <button onclick="window.location.href='https://www.w3schools.com/';">
                 Learn more
             </button>
         </div>
-        <div class="card" id="stack">
+      <div class="card" id="stack">
             <h1>Stack overflow</h1>
             <ul>
                 <li>Is a public forum used to answer all coding questions.</li>
                 <li>Users can ask specific questions that other professional and enthusiast programmers can answer.</li>
-                </ul>
+            </ul>
             <img class="right" src="ToolsAndResources\stack.jpg" alt="Stack Overflow">
             <button onclick="window.location.href='https://stackoverflow.com/';">
                 Learn more
             </button>
         </div>
-        <div class="card" id="git">
+      <div class="card" id="git">
             <h1>Git and GitHub</h1>
             <ul>
                 <li>Git Is a free tool that interacts with GitHub that can be used for tracking and organizing files.</li>
-                </ul>
+            </ul>
             <img class="left" src="ToolsAndResources\git.png" alt="Git">
             <button onclick="window.location.href='https://github.com/';">
                 Learn more
             </button>
         </div>
-        <div class="card" id="boot">
+      <div class="card" id="boot">
             <h1>Bootstrap</h1>
             <ul>
                 <li>Is the world most popular front-end open-source toolkit, featuring Sass variables and Mxins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</li>
-                </ul>
+            </ul>
             <img class="right" src="ToolsAndResources\bootstrap.png" alt="Bootstrap">
             <button onclick="window.location.href='https://getbootstrap.com/';">
                 Learn more
             </button>
         </div>
-        <div class="card" id="green">
+      <div class="card" id="green">
             <h1>Greensock</h1>
             <ul>
                 <li>Is used for modern web animation using a JavaScript toolset.</li>
-                </ul>
+            </ul>
             <img class="left" src="ToolsAndResources\Greensock.png" alt="Greensock">
             <button onclick="window.location.href='https://greensock.com/';">
                 Learn more
             </button>
         </div>
-        <div class="card" id="jQ">
+      <div class="card" id="jQ">
             <h1>JQuery</h1>
             <ul>
                 <li>Is a JavaScript library design to simplify your code.</li>
-                <li>jQuery library can:</li>
+                <li>jQuery library can accomplish:</li>
                     <ul>
                         <li>HTML/DOM manipulation</li>
                         <li>CSS manipulation</li>
@@ -146,5 +151,6 @@
                 Learn more
             </button>
         </div>
+
     </body>
 </html>
