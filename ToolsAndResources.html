@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Tools and Resources</title>
         <style>
+<<<<<<< HEAD
           img{
               width: 500px;
               height: 300px;
@@ -13,6 +14,15 @@
             overflow: hidden;
             background-color: #393d3f;
           }
+=======
+        img{
+            max-width: 400px;
+        }
+        .menu {
+          overflow: hidden;
+          background-color: #393d3f;
+        }
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
 
           .menu a {
             float: left;
@@ -23,12 +33,41 @@
             font-size: 17px;
           }
 
+<<<<<<< HEAD
           .menu a:hover {
             background-color: #62929e;
           }
           .card{
 
           }
+=======
+        .menu a:hover {
+          background-color: #62929e;
+        }
+        .card{
+            overflow: auto;
+            border-bottom: solid #546a7b 5px;
+            margin: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .left{
+            padding: 25px;
+            width: 40%;
+            float: left;
+        }
+        .right{
+            padding: 25px;
+            width: 40%;
+            float: right;
+            clear: both;
+        }
+        @media screen and (max-width: 800px) {
+            .left, .right {
+                width: 80%;
+            }
+        }
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
         </style>
     </head>
     <body>
@@ -51,8 +90,24 @@
             <p>When working with a team Git and Github are useful in sharing code.</p>
             <p>When coding there are some tools that can simplify the development of informative web pages by utilizing open-source toolkits like Bootstrap, Greensock, and jQuery.</p>
         </div>
+<<<<<<< HEAD
 
       <div class="card" id="atom">
+=======
+        <div class="menu">
+          <a href="#atom">Atom</a>
+          <a href="#vs">Visual Studio</a>
+          <a href="#w3">w3schools</a>
+          <a href="#stack">Stack Overflow</a>
+          <a href="#git">GitHub</a>
+          <a href="#boot">Bootstrap</a>
+          <a href="#green">Greensock</a>
+          <a href="#jQ">jQueary</a>
+        </div>
+
+        <div class="card" id="atom">
+            <div class="text right">
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <h1>Atom</h1>
             <ul>
                 <li>Works across operating systems, use on OS X, Windows, or Linux.</li>
@@ -62,12 +117,21 @@
                 <li>Easily browse files.</li>
                 <li>Has Multiple panes to compare and edit code across files.</li>
             </ul>
-            <img class="left" src="ToolsAndResources\atom.png" alt="atom">
             <button onclick="window.location.href='https://atom.io/';">
                 Learn more
             </button>
         </div>
+<<<<<<< HEAD
       <div class="card" id="vs">
+=======
+        <div class="left">
+            <img src="ToolsAndResources\atom.png" alt="atom">
+        </div>
+        </div>
+
+        <div class="card" id="vs">
+        <div class="text left">
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <h1>Visual Studio</h1>
             <ul>
                 <li>Has IntelliSense that provides smart completions based on variable types, function definitions, and imported modules</li>
@@ -75,27 +139,51 @@
                 <li>Git commands are built-in.</li>
                 <li>Be able to install extensions to add new languages, themes, debuggers, and to connect to additional services.</li>
             </ul>
-            <img class="right" src="ToolsAndResources\vs.jpg" alt="Visual Studio">
             <button onclick="window.location.href='https://code.visualstudio.com/';">
                 Learn more
             </button>
         </div>
+<<<<<<< HEAD
       <div class="card" id="w3">
+=======
+            <div class="right">
+                <img src="ToolsAndResources\vs.jpg" alt="Visual Studio">
+            </div>
+        </div>
+
+        <div class="card" id="w3">
+            <div class="text right">
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <h1>w3schools</h1>
             <ul>
                 <li>Is a learning tool for HTML, CSS, JavaScript, Python, PHP, and SQL.</li>
                 <li>W3schools is free with some premium features.</li>
+<<<<<<< HEAD
             </ul>
             <img class="left" src="ToolsAndResources\w3schools.jpg" alt="w3schools">
+=======
+                </ul>
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <button onclick="window.location.href='https://www.w3schools.com/';">
                 Learn more
             </button>
         </div>
+<<<<<<< HEAD
       <div class="card" id="stack">
+=======
+        <div class="left">
+            <img class="left" src="ToolsAndResources\w3schools.jpg" alt="w3schools">
+        </div>
+    </div>
+
+        <div class="card" id="stack">
+            <div class="text left">
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <h1>Stack overflow</h1>
             <ul>
                 <li>Is a public forum used to answer all coding questions.</li>
                 <li>Users can ask specific questions that other professional and enthusiast programmers can answer.</li>
+<<<<<<< HEAD
             </ul>
             <img class="right" src="ToolsAndResources\stack.jpg" alt="Stack Overflow">
             <button onclick="window.location.href='https://stackoverflow.com/';">
@@ -108,15 +196,44 @@
                 <li>Git Is a free tool that interacts with GitHub that can be used for tracking and organizing files.</li>
             </ul>
             <img class="left" src="ToolsAndResources\git.png" alt="Git">
+=======
+                </ul>
+            <button onclick="window.location.href='https://stackoverflow.com/';">
+                Learn more
+            </button>
+            </div>
+            <div class="right">
+                <img src="ToolsAndResources\stack.jpg" alt="Stack Overflow">
+            </div>
+    </div>
+
+        <div class="card" id="git">
+            <div class="text right">
+            <h1>Git and GitHub</h1>
+            <ul>
+                <li>Git Is a free tool that interacts with GitHub that can be used for tracking and organizing files.</li>
+                </ul>
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <button onclick="window.location.href='https://github.com/';">
                 Learn more
             </button>
         </div>
+<<<<<<< HEAD
       <div class="card" id="boot">
+=======
+        <div class="left">
+            <img src="ToolsAndResources\git.png" alt="Git">
+        </div>
+    </div>
+
+        <div class="card" id="boot">
+            <div class="text left">
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <h1>Bootstrap</h1>
             <ul>
                 <li>Is the world most popular front-end open-source toolkit, featuring Sass variables and Mxins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</li>
             </ul>
+<<<<<<< HEAD
             <img class="right" src="ToolsAndResources\bootstrap.png" alt="Bootstrap">
             <button onclick="window.location.href='https://getbootstrap.com/';">
                 Learn more
@@ -128,11 +245,38 @@
                 <li>Is used for modern web animation using a JavaScript toolset.</li>
             </ul>
             <img class="left" src="ToolsAndResources\Greensock.png" alt="Greensock">
+=======
+            <button onclick="window.location.href='https://getbootstrap.com/';">
+                Learn more
+            </button>
+            </div>
+            <div class="right">
+                <img src="ToolsAndResources\bootstrap.png" alt="Bootstrap">
+            </div>
+    </div>
+
+        <div class="card" id="green">
+            <div class="text right">
+            <h1>Greensock</h1>
+            <ul>
+                <li>Is used for modern web animation using a JavaScript toolset.</li>
+                </ul>
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <button onclick="window.location.href='https://greensock.com/';">
                 Learn more
             </button>
         </div>
+<<<<<<< HEAD
       <div class="card" id="jQ">
+=======
+        <div class="left">
+            <img src="ToolsAndResources\Greensock.png" alt="Greensock">
+        </div>
+    </div>
+
+        <div class="card" id="jQ">
+            <div class="text left">
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
             <h1>JQuery</h1>
             <ul>
                 <li>Is a JavaScript library design to simplify your code.</li>
@@ -146,11 +290,17 @@
                         <li>Utilities</li>
                     </ul>
                 </ul>
-            <img class="right" src="ToolsAndResources\jqueary.png" alt="jQuery">
             <button onclick="window.location.href='https://jquery.com/';">
                 Learn more
             </button>
         </div>
+<<<<<<< HEAD
+=======
+        <div class="right">
+            <img src="ToolsAndResources\jqueary.png" alt="jQuery">
+        </div>
+    </div>
+>>>>>>> 728b2f0909ac27c58b28809db2227e8284052178
 
     </body>
 </html>
